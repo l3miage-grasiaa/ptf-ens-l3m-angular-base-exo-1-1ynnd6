@@ -1,0 +1,14 @@
+<pre>
+Instructions :
+    * Définissez une balise img dont la source sera donnée par le signal calculé lieuActuel.
+    * Définissez une balise label qui permettra d'afficher la température de lieuActuel.
+    * Définissez un bouton qui appelera la méthode voyagevoyage quand l'utilisateur cliquera dessus.
+    * Ajoutez une balise pre qui affichera les valeur du signal log au format JSON.
+    * Abonnez-vous au chargement de l'image, publiez via le signal log le lieu correspondant à l'image qui vient de se charger
+</pre>
+<img [src]="lieuActuel().photoURL" />
+<label>temperature: {{ lieuActuel().temperature }} ℃</label>
+<button (click)="voyagevoyage()">cliquez ici</button>
+<pre
+  >{{ lieuActuel() | json }} 
+</pre>
